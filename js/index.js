@@ -40,3 +40,14 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Ignacio
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'img/header-img.png';
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = 'img/mid-page-accent.jpg'
+
+
