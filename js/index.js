@@ -1,11 +1,11 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "navItem1": "Services",
+    "navItem2": "Product",
+    "navItem3": "Vision",
+    "navItem4": "Features",
+    "navItem5": "About",
+    "navItem6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -13,11 +13,11 @@ const siteContent = {
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
-  "main-content": {
-    "features-h4":"Features",
-    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
-    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+  "mainContent": {
+    "featuresH4":"Features",
+    "featuresContent": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "aboutH4":"About",
+    "aboutContent": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -48,6 +48,55 @@ let ctaImg = document.querySelector('#cta-img');
 ctaImg.src = 'img/header-img.png';
 
 let middleImg = document.querySelector('#middle-img');
-middleImg.src = 'img/mid-page-accent.jpg'
+middleImg.src = 'img/mid-page-accent.jpg';
+
+
+// Main Content H4
+let mainH4 = document.querySelectorAll('.top-content .text-content h4');
+for (let i = 0; i < mainH4.length; i++) {
+  mainH4[0].textContent = siteContent.mainContent.featuresH4;
+  mainH4[1].textContent = siteContent.mainContent.aboutH4;
+}
+
+// Main Content Content
+let text = document.querySelectorAll('.top-content .text-content p');
+for (let i = 0; i < text.length; i++) {
+text[0].textContent = siteContent.mainContent.featuresContent;
+text[1].textContent = siteContent.mainContent.aboutContent;
+}
+
+// Navbar
+
+let navLinks= document.querySelectorAll('nav a');
+console.log(navLinks);
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[0].textContent = siteContent.nav.navItem1;
+  navLinks[1].textContent = siteContent.nav.navItem2;
+  navLinks[2].textContent = siteContent.nav.navItem3;
+  navLinks[3].textContent = siteContent.nav.navItem4;
+  navLinks[4].textContent = siteContent.nav.navItem5;
+  navLinks[5].textContent = siteContent.nav.navItem6;
+    };
+
+
+
+
+// nav
+
+// let linksArray = Object.values(siteContent.nav) 
+//   console.log(linksArray);
+
+
+// let nav= document.querySelector('nav');
+// let navLinks= nav.querySelectorAll('a');
+
+// navLinks.forEach( link => {
+//   for (let i = 0; i < navLinks.length; i++){
+//     link.textContent = linksArray[i];
+//   };
+  
+// })
+
 
 
